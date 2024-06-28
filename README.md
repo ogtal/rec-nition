@@ -46,8 +46,7 @@ Og for testdatasættet:
 For at gør brug af algortimen skal der først installeres *transformers* og *pytorch*:
 ```bash
 pip install torch
-pip install transformers
-
+pip install transformers==4.30.2
 ```
 
 Derefter kan modellen bruges tests på enkelte tekststykker ved at køre følgende:
@@ -60,7 +59,7 @@ from model_def import ElectraClassifier
 text = "Du har en rigtig god pointe"
 
 def load_model():
-    model_checkpoint = 'Maltehb/aelaectra-danish-electra-small-cased
+    model_checkpoint = 'Maltehb/aelaectra-danish-electra-small-cased'
     tokenizer = AutoTokenizer.from_pretrained(model_checkpoint, use_fast=True)
 
     model = ElectraClassifier(model_checkpoint,2)
